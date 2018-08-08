@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'got-header';
+  src: url('chrome-extension://__MSG_@@extension_id__/css/fonts/got.ttf')  format('truetype');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'got-body';
+  src: url('chrome-extension://__MSG_@@extension_id__/css/fonts/got.ttf')  format('truetype');
+  font-style: normal;
+  font-weight: 200;
+}
+
+#spoilers_blocker_overlay {
+  position: fixed;
+  z-index: 9999999999;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba( 17, 17, 17, 0.97);
+  color: #698A91;
+  font-family: got-body, Helvetica, Arial, sans-serif;
+}
+
+#spoilers_blocker_overlay>div {
+  width: 80%;
+}
+
+#spoilers_blocker_overlay #spoiler_blocker_header {
+  margin: 12px 0px 48px 1px;
+  font-size: 18px;
+  font-family: got-header, Helvetica, Arial, sans-serif;;
+  color: #8C8C8C;
+  -webkit-font-smoothing: antialiased;
+  text-align: left;
+}
+
+#spoilers_blocker_overlay #spoiler_blocker_warning_message {
+  margin: 0 0 48px;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: left;
+}
+
+#spoilers_blocker_overlay .spoilers_blocker_overlay_button {
+  margin: 32px 0 12px 0;
+  font-size: 16px;
+  text-decoration: none;
+  font-family: got-body, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  cursor: pointer;
+  opacity: .4;
+  text-align: left;
+}
+
+#spoilers_blocker_overlay .spoilers_blocker_overlay_button:hover {
+  opacity: 1;
+}
+
+#spoilers_advisory_message .spoilers_advisory_message {
+  font-size: 16px;
+  font-family: got-body, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-align: left;
+}

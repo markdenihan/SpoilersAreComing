@@ -1,0 +1,53 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+  <head>
+    <title>Spoilers Are Coming</title>
+    <style>
+      body {
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  width: 325px;
+		  height: 100px;
+		  margin: 0px;
+		  background-color: rgba( 17, 17, 17, 0.97);
+		  color: #698A91;
+		}
+		
+		body>div {
+		  width: 80%;
+		}
+		
+		.button {
+		  font-size: 14px;
+		  margin: 6px 0;
+		  text-decoration: none;
+		  -webkit-font-smoothing: antialiased;  
+		  cursor: pointer;
+		}
+		
+		.button:hover {
+		  color: #fff;
+		}
+    </style>
+    <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+    </head>
+    <body>
+		<div>
+			<div class="button" id="extension_switch" >Spoiler Warnings are ON</div>
+		</div>
+		<script src="jquery-3.3.1.min.js"></script>
+    	<script src="popup.js"></script>		
+	</body>
+</html>
+
