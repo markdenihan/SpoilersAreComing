@@ -218,6 +218,7 @@ lastMutationSearch = new Date(lastMutationSearch.getTime() - 1000*10);
 			"iron throne",
 			"seven kingdoms",
 			"dragon",
+			"dragonglass",
 			"whitewalker",
 			"winterfell",
 			"winter is coming",
@@ -324,7 +325,9 @@ lastMutationSearch = new Date(lastMutationSearch.getTime() - 1000*10);
 			"lion's tooth",
 			"longclaw",
 			"oathkeeper",
-			"widow's wail"
+			"widow's wail",
+			"needle",
+			"faceless"
 		];
 
 		var instant_spoiler_phrases = [
@@ -364,8 +367,12 @@ lastMutationSearch = new Date(lastMutationSearch.getTime() - 1000*10);
 			"daenerys targaryen",
 			"daenerys",
 			"dany targaryen",
+			"dany",
+			"khaleesi",
 			"rhaegar targaryen",
+			"rhaegar",
 			"lyanna stark",
+			"lyanna",
 			"jorah mormont",
 			"jorah",
 			"petyr baelish",
@@ -417,13 +424,16 @@ lastMutationSearch = new Date(lastMutationSearch.getTime() - 1000*10);
 			"roose bolton",
 			"the high sparrow",
 			"hodor",
+			"ser gregor",
 			"gregor clegane",
 			"the mountain",
 			"janos slynt",
 			"irri",
 			"doreah",
 			"kevan lannister",
+			"kevan",
 			"maester aemon",
+			"aemon",
 			"hot pie",
 			"beric dondarrion",
 			"beric",
@@ -440,6 +450,7 @@ lastMutationSearch = new Date(lastMutationSearch.getTime() - 1000*10);
 			"thoros of myr",
 			"mace tyrell",
 			"bowen marsh",
+			"bowen",
 			"night king",
 			"drogon",
 			"rhaegal",
@@ -451,7 +462,10 @@ lastMutationSearch = new Date(lastMutationSearch.getTime() - 1000*10);
 			"euron",
 			"mother of dragons",
 			"king in the north",
-			"yohn royce"
+			"yohn royce",
+			"dragon",
+			"whitewalker",
+			"whitewalkers"
 		];
 
 		var actor_names = [
@@ -556,8 +570,12 @@ lastMutationSearch = new Date(lastMutationSearch.getTime() - 1000*10);
 			" return",
 			" is back",
 			" betray",
-			" captur",
-			" abandon"
+			" capture",
+			" abandon",
+			" pregnant",
+			"'s child",
+			" ambused",
+			" attack"
 		];
 
 		var spoiler_verbs_before = [
@@ -568,9 +586,12 @@ lastMutationSearch = new Date(lastMutationSearch.getTime() - 1000*10);
 			"stabbed ",
 			"kills ",
 			"betrays ",
+			"betrayed ",
 			"betrayed by ",
 			"captured ",
-			"abandoned "
+			"abandoned ",
+			"attacks ",
+			"attacked "
 		];
 
 		new Controller(
@@ -629,7 +650,7 @@ lastMutationSearch = new Date(lastMutationSearch.getTime() - 1000*10);
 		// create an observer instance
 		var observer = new MutationObserver(function(mutations) {
 		  mutations.forEach(function(mutation) {
-		    //console.log("Mutation Detected: " + mutation.type);
+		    console.log("Mutation Detected: " + mutation.type);
 		    if(alertActive){
 		    	//console.log("Not Searching. Alert Active");
 		    } else {
