@@ -209,6 +209,7 @@ lastMutationSearch = new Date(lastMutationSearch.getTime() - 1000*10);
 		];
 
 		var spoiler_phrases = [
+			"Cersei engages Drogon in trial by combat #S8E1",
 			"game of thrones",
 			"game-of-thrones",
 			"game of thrones season eight",
